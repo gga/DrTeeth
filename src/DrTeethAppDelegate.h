@@ -10,13 +10,18 @@
 
 @class DrTeethViewController;
 
-@interface DrTeethAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
-    DrTeethViewController *viewController;
+@interface DrTeethAppDelegate : NSObject <UIApplicationDelegate>
+{
+  UIWindow *window;
+  DrTeethViewController *viewController;
+
+  NSArray *blogEntries;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet DrTeethViewController *viewController;
+
+@property (nonatomic, retain) NSArray *blogEntries;
 
 @end
 

@@ -7,10 +7,33 @@
 //
 
 #import "TWBlogsController.h"
+#import "GDataXMLNode.h"
 
+@interface NSObject (Maybe)
+
+@property (nonatomic, readonly) id maybe;
+
+@end
+
+@implementation NSObject (Maybe)
+
+- (id)maybe
+{
+  if (self == [NSNull null])
+    return nil;
+  else
+    return self;
+}
+
+@end
+
+@interface TWBlogsController ()
+- (void)updateBlogEntries:(NSArray *)entries;
+@end
 
 @implementation TWBlogsController
 
+@synthesize entries;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -19,10 +42,26 @@
 {
   [super viewDidLoad];
 
-  // Uncomment the following line to preserve selection between presentations.
-//  self.clearsSelectionOnViewWillAppear = NO;
+  [
+    [ UIApplication sharedApplication ]
+    .delegate addObserver: self forKeyPath: @"blogEntries" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial) context:NULL
+  ];
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+  if( [keyPath isEqualToString: @"blogEntries"] )
+  {
+    [self performSelectorOnMainThread: @selector(updateBlogEntries:) withObject:[[change objectForKey: NSKeyValueChangeNewKey] maybe] waitUntilDone: NO];
+  }
+}
+
+- (void)updateBlogEntries:(NSArray *)entries
+{
+  NSLog(@"Blog count: %d", entries.count);
+  self.entries = entries;
+  [tableView reloadData];
+}
 /*
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -60,14 +99,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 0;
+    return 1;
 //    return <#number of sections#>;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 0;
+    return entries.count;
 //    return <#number of rows in section#>;
 }
 
@@ -83,6 +122,11 @@
     }
 
     // Configure the cell...
+    id entry = [entries objectAtIndex:indexPath.row];
+    NSArray *values = [entry elementsForLocalName:@"title" URI:@"http://www.w3.org/2005/Atom"];
+//     NSArray *values = [entry nodesForXPath:@"//atom:title" namespaces:[NSDictionary dictionaryWithObject:@"http://www.w3.org/2005/Atom" forKey:@"atom"] error:nil];
+//     cell.textLabel.text = [[values objectAtIndex:0] stringValue];
+//     cell.textLabel.text = [entry localName];
 
     return cell;
 }

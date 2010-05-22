@@ -19,6 +19,7 @@
     owner = [a_owner retain];
     failed = NO;
     content = [[NSMutableData data] retain];
+    source = [url retain];
   }
   return self;
 }

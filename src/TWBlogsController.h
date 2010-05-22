@@ -12,8 +12,10 @@
 @interface TWBlogsController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {
   IBOutlet UITableView *tableView;
+  NSArray *entries;
 }
 
 - (void)close:(id)sender;
 
+@property (nonatomic,retain) NSArray *entries;
 @end
