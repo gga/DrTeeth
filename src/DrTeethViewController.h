@@ -12,5 +12,7 @@
 
 }
 
+- (void)showBlogs:(id)sender;
+
 @end
 

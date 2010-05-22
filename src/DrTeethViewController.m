@@ -53,6 +53,9 @@
 	// e.g. self.myOutlet = nil;
 }
 
+- (void)showBlogs:(id)sender
+{
+}
 
 - (void)dealloc {
     [super dealloc];

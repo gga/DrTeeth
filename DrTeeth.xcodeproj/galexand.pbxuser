@@ -42,6 +42,14 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
+	02908F2811A7BD8200ECDADF /* TWBlogsController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 430}}";
+			sepNavSelRange = "{242, 0}";
+			sepNavVisRange = "{0, 242}";
+			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
+		};
+	};
 	1D6058900D05DD3D006BFB54 /* DrTeeth */ = {
 		activeExec = 0;
 		executables = (
