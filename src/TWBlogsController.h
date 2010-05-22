@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 
-@interface TWBlogsController : UITableViewController {
-
+@interface TWBlogsController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+{
+  IBOutlet UITableView *tableView;
 }
+
+- (void)close:(id)sender;
 
 @end

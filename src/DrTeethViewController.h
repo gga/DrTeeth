@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DrTeethViewController : UIViewController {
+@class TWBlogsController;
 
+@interface DrTeethViewController : UIViewController
+{
 }
 
 - (void)showBlogs:(id)sender;
+
 
 @end
 

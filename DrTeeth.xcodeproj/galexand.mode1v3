@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>02908F4D11A7C0CC00ECDADF</string>
+						<string>02908F7111A7CCA400ECDADF</string>
 						<key>history</key>
 						<array>
 							<string>02908F4211A7C08E00ECDADF</string>
@@ -235,7 +235,7 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>38 350 750 502 0 0 1440 878 </string>
+				<string>271 183 750 502 0 0 1440 878 </string>
 			</dict>
 		</dict>
 	</array>
@@ -487,8 +487,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
-									<integer>3</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
@@ -567,14 +565,14 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>02908F4C11A7C0C000ECDADF</string>
+		<string>02908F7211A7CCA400ECDADF</string>
 		<string>02908F4511A7C08E00ECDADF</string>
 		<string>02908F4611A7C08E00ECDADF</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>02908F0311A7B6D600ECDADF</string>
 		<string>1C78EAAD065D492600B07095</string>
-		<string>/Users/galexand/dev/personal/DrTeeth/DrTeeth.xcodeproj</string>
 		<string>02908F4011A7C08E00ECDADF</string>
+		<string>/Users/galexand/dev/personal/DrTeeth/DrTeeth.xcodeproj</string>
+		<string>02908F0311A7B6D600ECDADF</string>
 	</array>
 	<key>WindowString</key>
 	<string>1049 350 361 506 0 0 1440 878 </string>

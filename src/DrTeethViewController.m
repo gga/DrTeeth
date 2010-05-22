@@ -56,13 +56,13 @@
 
 - (void)showBlogs:(id)sender
 {
-  NSLog(@"Trying to show blogs");
-  TWBlogsController *blogs = [[TWBlogsController alloc] initWithNibName:@"TWBlogsController" bundle:nil];
+  TWBlogsController *blogs = [[[TWBlogsController alloc] initWithNibName:@"TWBlogsController"
+                                                                  bundle:nil] autorelease];
   [self presentModalViewController:blogs animated:YES];
 }
 
 - (void)dealloc {
-    [super dealloc];
+  [super dealloc];
 }
 
 @end

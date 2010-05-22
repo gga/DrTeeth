@@ -48,9 +48,9 @@
 	};
 	02908F1911A7BA2600ECDADF /* DrTeethViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {747, 897}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{850, 776}";
+			sepNavIntBoundsRect = "{{0, 0}, {712, 897}}";
+			sepNavSelRange = "{1670, 0}";
+			sepNavVisRange = "{803, 861}";
 		};
 	};
 	02908F2811A7BD8200ECDADF /* TWBlogsController.h */ = {
@@ -63,10 +63,10 @@
 	};
 	02908F2911A7BD8200ECDADF /* TWBlogsController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = \"number of sections\";\n            r = \"{1362, 22}\";\n            s = 1;\n        },\n                {\n            l = \"number of rows in section\";\n            r = \"{1557, 29}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3656, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3707, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{3757, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4453}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {886, 2288}}";
-			sepNavSelRange = "{1521, 0}";
-			sepNavVisRange = "{1175, 368}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = \"number of sections\";\n            r = \"{1247, 22}\";\n            s = 1;\n        },\n                {\n            l = \"number of rows in section\";\n            r = \"{1442, 29}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3515, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3566, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{3616, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4308}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {886, 2223}}";
+			sepNavSelRange = "{4202, 0}";
+			sepNavVisRange = "{1077, 506}";
 		};
 	};
 	02908F4211A7C08E00ECDADF /* PBXTextBookmark */ = {
@@ -103,7 +103,7 @@
 		fRef = 02908F2911A7BD8200ECDADF /* TWBlogsController.m */;
 		name = "TWBlogsController.m: 70";
 		rLen = 0;
-		rLoc = 1542;
+		rLoc = 1544;
 		rType = 0;
 		vrLen = 417;
 		vrLoc = 1175;
@@ -127,6 +127,56 @@
 		rType = 0;
 		vrLen = 776;
 		vrLoc = 850;
+	};
+	02908F4F11A7C20900ECDADF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02908F1911A7BA2600ECDADF /* DrTeethViewController.m */;
+		name = "DrTeethViewController.m: 69";
+		rLen = 0;
+		rLoc = 1590;
+		rType = 0;
+		vrLen = 760;
+		vrLoc = 825;
+	};
+	02908F5C11A7C72100ECDADF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02908F1911A7BA2600ECDADF /* DrTeethViewController.m */;
+		name = "DrTeethViewController.m: 59";
+		rLen = 0;
+		rLoc = 1436;
+		rType = 0;
+		vrLen = 760;
+		vrLoc = 825;
+	};
+	02908F6011A7C75D00ECDADF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02908F1911A7BA2600ECDADF /* DrTeethViewController.m */;
+		name = "DrTeethViewController.m: 59";
+		rLen = 0;
+		rLoc = 1436;
+		rType = 0;
+		vrLen = 765;
+		vrLoc = 825;
+	};
+	02908F6811A7CA1E00ECDADF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02908F1911A7BA2600ECDADF /* DrTeethViewController.m */;
+		name = "DrTeethViewController.m: 69";
+		rLen = 0;
+		rLoc = 1670;
+		rType = 0;
+		vrLen = 861;
+		vrLoc = 803;
+	};
+	02908F7111A7CCA400ECDADF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02908F1911A7BA2600ECDADF /* DrTeethViewController.m */;
+		name = "DrTeethViewController.m: 69";
+		rLen = 0;
+		rLoc = 1670;
+		rType = 0;
+		vrLen = 861;
+		vrLoc = 803;
 	};
 	1D6058900D05DD3D006BFB54 /* DrTeeth */ = {
 		activeExec = 0;
@@ -180,6 +230,11 @@
 			02908F4811A7C0BE00ECDADF /* PBXTextBookmark */ = 02908F4811A7C0BE00ECDADF /* PBXTextBookmark */;
 			02908F4B11A7C0C000ECDADF /* PBXTextBookmark */ = 02908F4B11A7C0C000ECDADF /* PBXTextBookmark */;
 			02908F4D11A7C0CC00ECDADF /* PBXTextBookmark */ = 02908F4D11A7C0CC00ECDADF /* PBXTextBookmark */;
+			02908F4F11A7C20900ECDADF /* PBXTextBookmark */ = 02908F4F11A7C20900ECDADF /* PBXTextBookmark */;
+			02908F5C11A7C72100ECDADF /* PBXTextBookmark */ = 02908F5C11A7C72100ECDADF /* PBXTextBookmark */;
+			02908F6011A7C75D00ECDADF /* PBXTextBookmark */ = 02908F6011A7C75D00ECDADF /* PBXTextBookmark */;
+			02908F6811A7CA1E00ECDADF /* PBXTextBookmark */ = 02908F6811A7CA1E00ECDADF /* PBXTextBookmark */;
+			02908F7111A7CCA400ECDADF /* PBXTextBookmark */ = 02908F7111A7CCA400ECDADF /* PBXTextBookmark */;
 		};
 		sourceControlManager = 02908F0C11A7B6D600ECDADF /* Source Control */;
 		userBuildSettings = {
