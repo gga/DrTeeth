@@ -7,6 +7,7 @@
 //
 
 #import "DrTeethViewController.h"
+#import "TWBlogsController.h"
 
 @implementation DrTeethViewController
 
@@ -55,6 +56,9 @@
 
 - (void)showBlogs:(id)sender
 {
+  NSLog(@"Trying to show blogs");
+  TWBlogsController *blogs = [[TWBlogsController alloc] initWithNibName:@"TWBlogsController" bundle:nil];
+  [self presentModalViewController:blogs animated:YES];
 }
 
 - (void)dealloc {

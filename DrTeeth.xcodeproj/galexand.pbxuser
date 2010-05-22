@@ -7,7 +7,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -24,9 +24,13 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = DrTeeth;
+		savedGlobals = {
+		};
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
+		variableFormatDictionary = {
+		};
 	};
 	02908F0C11A7B6D600ECDADF /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -42,6 +46,13 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
+	02908F1911A7BA2600ECDADF /* DrTeethViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {747, 897}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{850, 776}";
+		};
+	};
 	02908F2811A7BD8200ECDADF /* TWBlogsController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {691, 430}}";
@@ -49,6 +60,73 @@
 			sepNavVisRange = "{0, 242}";
 			sepNavWindowFrame = "{{15, 315}, {750, 558}}";
 		};
+	};
+	02908F2911A7BD8200ECDADF /* TWBlogsController.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = \"number of sections\";\n            r = \"{1362, 22}\";\n            s = 1;\n        },\n                {\n            l = \"number of rows in section\";\n            r = \"{1557, 29}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3656, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3707, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{3757, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4453}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {886, 2288}}";
+			sepNavSelRange = "{1521, 0}";
+			sepNavVisRange = "{1175, 368}";
+		};
+	};
+	02908F4211A7C08E00ECDADF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02908F1911A7BA2600ECDADF /* DrTeethViewController.m */;
+		name = "DrTeethViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 776;
+		vrLoc = 850;
+	};
+	02908F4311A7C08E00ECDADF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02908F1911A7BA2600ECDADF /* DrTeethViewController.m */;
+		name = "DrTeethViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 776;
+		vrLoc = 850;
+	};
+	02908F4711A7C0BE00ECDADF /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected expression before '<' token";
+		fRef = 02908F2911A7BD8200ECDADF /* TWBlogsController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 62;
+		rType = 1;
+	};
+	02908F4811A7C0BE00ECDADF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02908F2911A7BD8200ECDADF /* TWBlogsController.m */;
+		name = "TWBlogsController.m: 70";
+		rLen = 0;
+		rLoc = 1542;
+		rType = 0;
+		vrLen = 417;
+		vrLoc = 1175;
+	};
+	02908F4B11A7C0C000ECDADF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02908F1911A7BA2600ECDADF /* DrTeethViewController.m */;
+		name = "DrTeethViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 776;
+		vrLoc = 850;
+	};
+	02908F4D11A7C0CC00ECDADF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02908F1911A7BA2600ECDADF /* DrTeethViewController.m */;
+		name = "DrTeethViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 776;
+		vrLoc = 850;
 	};
 	1D6058900D05DD3D006BFB54 /* DrTeeth */ = {
 		activeExec = 0;
@@ -62,6 +140,8 @@
 		activeTarget = 1D6058900D05DD3D006BFB54 /* DrTeeth */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* DrTeeth */,
+		);
+		breakpoints = (
 		);
 		codeSenseManager = 02908F0D11A7B6D600ECDADF /* Code sense */;
 		executables = (
@@ -92,6 +172,14 @@
 			};
 			PBXPerProjectTemplateStateSaveDate = 296203979;
 			PBXWorkspaceStateSaveDate = 296203979;
+		};
+		perUserProjectItems = {
+			02908F4211A7C08E00ECDADF /* PBXTextBookmark */ = 02908F4211A7C08E00ECDADF /* PBXTextBookmark */;
+			02908F4311A7C08E00ECDADF /* PBXTextBookmark */ = 02908F4311A7C08E00ECDADF /* PBXTextBookmark */;
+			02908F4711A7C0BE00ECDADF /* XCBuildMessageTextBookmark */ = 02908F4711A7C0BE00ECDADF /* XCBuildMessageTextBookmark */;
+			02908F4811A7C0BE00ECDADF /* PBXTextBookmark */ = 02908F4811A7C0BE00ECDADF /* PBXTextBookmark */;
+			02908F4B11A7C0C000ECDADF /* PBXTextBookmark */ = 02908F4B11A7C0C000ECDADF /* PBXTextBookmark */;
+			02908F4D11A7C0CC00ECDADF /* PBXTextBookmark */ = 02908F4D11A7C0CC00ECDADF /* PBXTextBookmark */;
 		};
 		sourceControlManager = 02908F0C11A7B6D600ECDADF /* Source Control */;
 		userBuildSettings = {
