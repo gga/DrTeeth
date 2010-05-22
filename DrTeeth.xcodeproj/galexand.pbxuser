@@ -52,6 +52,9 @@
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 02908EF411A7B6CB00ECDADF /* DrTeeth */;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* DrTeeth */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* DrTeeth */,
+		);
 		codeSenseManager = 02908F0D11A7B6D600ECDADF /* Code sense */;
 		executables = (
 			02908EF411A7B6CB00ECDADF /* DrTeeth */,
@@ -62,7 +65,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					341,
+					245,
 					20,
 					48.16259765625,
 					43,
