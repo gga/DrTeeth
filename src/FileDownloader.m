@@ -3,7 +3,6 @@
 //  palea
 //
 //  Created by Giles Alexander on 30/08/09.
-//  Copyright 2009 Silverbrook Research. All rights reserved.
 //
 
 #import "FileDownloader.h"

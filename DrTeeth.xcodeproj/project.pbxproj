@@ -13,6 +13,8 @@
 		02908F2011A7BA4600ECDADF /* DrTeeth-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02908F1F11A7BA4600ECDADF /* DrTeeth-Info.plist */; };
 		02908F2B11A7BD8200ECDADF /* TWBlogsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02908F2911A7BD8200ECDADF /* TWBlogsController.m */; };
 		02908F2E11A7BDE200ECDADF /* TWBlogsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02908F2D11A7BDE200ECDADF /* TWBlogsController.xib */; };
+		02908F7611A7CDBB00ECDADF /* NSObject+fileDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 02908F7511A7CDBB00ECDADF /* NSObject+fileDownload.m */; };
+		02908F7911A7CDCB00ECDADF /* FileDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 02908F7811A7CDCB00ECDADF /* FileDownloader.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
@@ -31,6 +33,10 @@
 		02908F2811A7BD8200ECDADF /* TWBlogsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBlogsController.h; sourceTree = "<group>"; };
 		02908F2911A7BD8200ECDADF /* TWBlogsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBlogsController.m; sourceTree = "<group>"; };
 		02908F2D11A7BDE200ECDADF /* TWBlogsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TWBlogsController.xib; sourceTree = "<group>"; };
+		02908F7411A7CDBB00ECDADF /* NSObject+fileDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+fileDownload.h"; sourceTree = "<group>"; };
+		02908F7511A7CDBB00ECDADF /* NSObject+fileDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+fileDownload.m"; sourceTree = "<group>"; };
+		02908F7711A7CDCB00ECDADF /* FileDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloader.h; sourceTree = "<group>"; };
+		02908F7811A7CDCB00ECDADF /* FileDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloader.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* DrTeeth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrTeeth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -56,6 +62,9 @@
 		02908F1311A7B9E000ECDADF /* src */ = {
 			isa = PBXGroup;
 			children = (
+				02908F7711A7CDCB00ECDADF /* FileDownloader.h */,
+				02908F7811A7CDCB00ECDADF /* FileDownloader.m */,
+				02908F7311A7CDAD00ECDADF /* Categories */,
 				02908F1E11A7BA2900ECDADF /* Controllers */,
 				02908F1511A7BA2600ECDADF /* DrTeeth_Prefix.pch */,
 				02908F1611A7BA2600ECDADF /* DrTeethAppDelegate.h */,
@@ -74,6 +83,15 @@
 				02908F2911A7BD8200ECDADF /* TWBlogsController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		02908F7311A7CDAD00ECDADF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				02908F7411A7CDBB00ECDADF /* NSObject+fileDownload.h */,
+				02908F7511A7CDBB00ECDADF /* NSObject+fileDownload.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -176,6 +194,8 @@
 				02908F1C11A7BA2600ECDADF /* DrTeethViewController.m in Sources */,
 				02908F1D11A7BA2600ECDADF /* main.m in Sources */,
 				02908F2B11A7BD8200ECDADF /* TWBlogsController.m in Sources */,
+				02908F7611A7CDBB00ECDADF /* NSObject+fileDownload.m in Sources */,
+				02908F7911A7CDCB00ECDADF /* FileDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
