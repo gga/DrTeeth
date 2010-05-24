@@ -33,6 +33,7 @@
 
 - (void)dealloc {
   [blogEntries release];
+  [blogFeedDoc release];
   [viewController release];
   [window release];
   [super dealloc];
@@ -43,8 +44,13 @@
            gotData:(NSData *)data
 {
   NSError *err;
-  GDataXMLDocument *doc = [[[GDataXMLDocument alloc] initWithData:data options:0 error:&err] autorelease];
-  self.blogEntries = [doc nodesForXPath:@"/atom:feed/atom:entry" namespaces:[NSDictionary dictionaryWithObject:@"http://www.w3.org/2005/Atom" forKey:@"atom"] error:nil];
+  blogFeedDoc = [[GDataXMLDocument alloc] initWithData:data
+                                               options:0
+                                                 error:&err];
+  self.blogEntries = [blogFeedDoc nodesForXPath:@"/atom:feed/atom:entry"
+                                     namespaces:[NSDictionary dictionaryWithObject:@"http://www.w3.org/2005/Atom"
+                                                                            forKey:@"atom"]
+                                          error:nil];
 }
 
 - (void)downloader:(FileDownloader *)downloader

@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @class DrTeethViewController;
+@class GDataXMLDocument;
 
 @interface DrTeethAppDelegate : NSObject <UIApplicationDelegate>
 {
   UIWindow *window;
   DrTeethViewController *viewController;
 
+  GDataXMLDocument *blogFeedDoc;
   NSArray *blogEntries;
 }
 

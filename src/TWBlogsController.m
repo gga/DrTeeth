@@ -27,6 +27,26 @@
 
 @end
 
+@interface GDataXMLElement (Convenience)
+
+- (GDataXMLElement *)firstElementWithLocalName:(NSString *)localName URI:(NSString *)uri;
+
+@end
+
+@implementation GDataXMLElement (Convenience)
+
+- (GDataXMLElement *)firstElementWithLocalName:(NSString *)localName URI:(NSString *)uri
+{
+  NSArray *elements = [self elementsForLocalName:localName
+                                             URI:uri];
+  if ([elements count] > 0)
+    return [elements objectAtIndex:0];
+  else
+    return nil;
+}
+
+@end
+
 @interface TWBlogsController ()
 - (void)updateBlogEntries:(NSArray *)entries;
 @end
@@ -118,14 +138,19 @@
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
 
     // Configure the cell...
     id entry = [entries objectAtIndex:indexPath.row];
-    NSArray *values = [entry elementsForLocalName:@"title" URI:@"http://www.w3.org/2005/Atom"];
-//     NSArray *values = [entry nodesForXPath:@"//atom:title" namespaces:[NSDictionary dictionaryWithObject:@"http://www.w3.org/2005/Atom" forKey:@"atom"] error:nil];
-//     cell.textLabel.text = [[values objectAtIndex:0] stringValue];
+    GDataXMLElement *title = [entry firstElementWithLocalName:@"title" URI:@"http://www.w3.org/2005/Atom"];
+    GDataXMLElement *author = [entry firstElementWithLocalName:@"author" URI:@"http://www.w3.org/2005/Atom"];
+    GDataXMLElement *name = [author firstElementWithLocalName:@"name" URI:@"http://www.w3.org/2005/Atom"];
+    cell.textLabel.text = [title stringValue];
+    cell.detailTextLabel.text = [name stringValue];
+//     NSArray *values = [entry elementsForLocalName:@"title" URI:@"http://www.w3.org/2005/Atom"];
+//     NSArray *values = [entry nodesForXPath:@"//atom:entry/atom:title" namespaces:[NSDictionary dictionaryWithObject:@"http://www.w3.org/2005/Atom" forKey:@"atom"] error:nil];
+    
 //     cell.textLabel.text = [entry localName];
 
     return cell;
