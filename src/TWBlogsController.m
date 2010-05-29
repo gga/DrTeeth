@@ -144,14 +144,15 @@
     // Configure the cell...
     id entry = [entries objectAtIndex:indexPath.row];
     GDataXMLElement *title = [entry firstElementWithLocalName:@"title" URI:@"http://www.w3.org/2005/Atom"];
-    GDataXMLElement *author = [entry firstElementWithLocalName:@"author" URI:@"http://www.w3.org/2005/Atom"];
-    GDataXMLElement *name = [author firstElementWithLocalName:@"name" URI:@"http://www.w3.org/2005/Atom"];
+    NSArray *authors = [entry nodesForXPath:@"atom:author/atom:name|atom:source/atom:author/atom:name"
+                                 namespaces:[NSDictionary dictionaryWithObject:@"http://www.w3.org/2005/Atom" forKey:@"atom"]
+                                      error:nil];
     cell.textLabel.text = [title stringValue];
-    cell.detailTextLabel.text = [name stringValue];
-//     NSArray *values = [entry elementsForLocalName:@"title" URI:@"http://www.w3.org/2005/Atom"];
-//     NSArray *values = [entry nodesForXPath:@"//atom:entry/atom:title" namespaces:[NSDictionary dictionaryWithObject:@"http://www.w3.org/2005/Atom" forKey:@"atom"] error:nil];
-    
-//     cell.textLabel.text = [entry localName];
+    if ([authors count] > 0)
+    {
+      GDataXMLElement *name = [authors objectAtIndex:0];
+      cell.detailTextLabel.text = [name stringValue];
+    }
 
     return cell;
 }
