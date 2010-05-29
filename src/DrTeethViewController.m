@@ -10,11 +10,11 @@
 #import "TWBlogsController.h"
 
 @interface UIView (extended)
-- (void) startHeartbeat: (SEL) aSelector inRunLoopMode: (id) mode;	
+- (void) startHeartbeat: (SEL) aSelector inRunLoopMode: (id) mode;
 - (void) stopHeartbeat: (SEL) aSelector;
 @end
 
-@implementation DrTeethViewController 
+@implementation DrTeethViewController
 
 @synthesize covers;
 @synthesize cfView;
@@ -41,21 +41,13 @@
   [super viewDidLoad];
   [meContainer addSubview: credentials];
 
-	
-	// Finish setting up the cover flow layer
-	
 
-//	self.cfView = [[CoverFlowView alloc] initWithFrame: CGRectMake(20.0f, 300.0f, 200.0f, 720.0f)  andCount:[self.covers count] inLandscape: YES];
 	[self.cfView setUserInteractionEnabled:YES];
-//	[self.cfView setHost:self];
 
-//	[self.view addSubview: self.cfView];
-	//	self.whichItem = 1;
 	[self.cfView.cfLayer selectCoverAtIndex:2];
 	[self.cfView.cfLayer setDelegate:self];
 	[self.cfView.cfLayer setDisplayedOrientation: UIInterfaceOrientationPortrait animate:NO];
 	[self coverFlowStart];
-	
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -109,7 +101,7 @@
 		// Load the images
 		for (int i = 1; i <= 6; ++i)
 		{
-			NSString *imgPath = [NSString stringWithFormat:@"%d.jpg", i];
+			NSString *imgPath = [NSString stringWithFormat:@"portfolios/%d/thumbnail.jpg", i];
 			UIImage *img = [UIImage imageNamed:imgPath];
 			self.covers = [self.covers arrayByAddingObject: img];
 		}
@@ -117,10 +109,10 @@
 	return [self.covers count];
 }
 
-- (void) doubleTapCallback 
+- (void) doubleTapCallback
 {
 }
-	
+
 
 // *********************************************
 // Coverflow delegate methods
@@ -132,7 +124,7 @@
 }
 
 // Detect the end of the flip -- both on reveal and hide
-- (void) coverFlowFlipDidEnd: (UICoverFlowLayer *)coverFlow 
+- (void) coverFlowFlipDidEnd: (UICoverFlowLayer *)coverFlow
 {
 //	if (flipOut)
 //		[[[UIApplication sharedApplication] keyWindow] addSubview:flippedView];
@@ -154,14 +146,14 @@
 {
 //	if (flipOut) [flippedView removeFromSuperview];
 //	flipOut = !flipOut;
-//	
+//
 //	// Prepare the flip text
 //	[flippedView setText:[NSString stringWithFormat:@"%@\n%@", [self.titles objectAtIndex:index], [self.colorDict objectForKey:[self.titles objectAtIndex:index]]]];
-//	
+//
 //	// Flip with a simple blank square
 //	UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 140.0f, 140.0f)] autorelease];
 //	[view setBackgroundColor:[UIColor clearColor]];
-//	
+//
 //	return [view layer];
 	return nil;
 }

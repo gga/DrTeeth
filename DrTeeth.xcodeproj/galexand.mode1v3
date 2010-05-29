@@ -266,7 +266,6 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>0237FB6B11B0E84C006B2D9B</string>
 								<string>0237FA8511B0D874006B2D9B</string>
-								<string>0237FA8611B0D874006B2D9B</string>
 								<string>02908F1311A7B9E000ECDADF</string>
 								<string>02908F1E11A7BA2900ECDADF</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
@@ -278,9 +277,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>21</integer>
-									<integer>19</integer>
 									<integer>15</integer>
+									<integer>13</integer>
+									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -450,7 +449,7 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>0237FB6B11B0E84C006B2D9B</string>
 								<string>0237FA8511B0D874006B2D9B</string>
-								<string>0237FA8611B0D874006B2D9B</string>
+								<string>027FE45611B109AF000367F9</string>
 								<string>02908F1311A7B9E000ECDADF</string>
 								<string>02908F1E11A7BA2900ECDADF</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
@@ -463,13 +462,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>31</integer>
-									<integer>28</integer>
+									<integer>11</integer>
+									<integer>6</integer>
+									<integer>5</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 330}, {416, 396}}</string>
+							<string>{{0, 0}, {416, 396}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -542,7 +542,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>027FE45111B106E0000367F9</string>
+		<string>027FE47F11B10BE1000367F9</string>
 		<string>027FE33311B0F87C000367F9</string>
 		<string>027FE28811B0F33E000367F9</string>
 		<string>027FE27711B0F244000367F9</string>
