@@ -14,6 +14,13 @@
 - (void) stopHeartbeat: (SEL) aSelector;
 @end
 
+@interface DrTeethViewController ()
+
+- (void) coverFlowStart;
+- (void) coverFlowStop;
+
+@end
+
 @implementation DrTeethViewController
 
 @synthesize covers;
@@ -41,13 +48,21 @@
   [super viewDidLoad];
   [meContainer addSubview: credentials];
 
-
 	[self.cfView setUserInteractionEnabled:YES];
 
 	[self.cfView.cfLayer selectCoverAtIndex:2];
 	[self.cfView.cfLayer setDelegate:self];
 	[self.cfView.cfLayer setDisplayedOrientation: UIInterfaceOrientationPortrait animate:NO];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
 	[self coverFlowStart];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+  [self coverFlowStop];
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -74,6 +89,16 @@
   [self presentModalViewController:blogs animated:YES];
 }
 
+- (void)showCollateral
+{
+  unsigned int selectedCollateral = [self.cfView.cfLayer indexOfSelectedCover];
+  NSString *dirPath = [NSString stringWithFormat:@"portfolios/%d", selectedCollateral];
+  NSString *hrefFile = [[NSBundle mainBundle] pathForResource:@"href" ofType:nil inDirectory:dirPath];
+  NSString *href = [NSString stringWithContentsOfFile:hrefFile
+                                             encoding:NSUTF8StringEncoding
+                                                error:NULL];
+}
+
 - (void)signIn:(id)sender
 {
   NSLog(@"signIn boyo");
@@ -90,6 +115,12 @@
 	[self.cfView.cfLayer transitionIn:1.0f];
 }
 
+- (void) coverFlowStop
+{
+	[self.cfView.cfLayer transitionOut:1.0f];
+	[self.cfView stopHeartbeat: @selector(tick)];
+}
+
 /*
   CoverFlowHost methods
  */
@@ -99,7 +130,7 @@
 	{
 		self.covers = [NSArray array];
 		// Load the images
-		for (int i = 1; i <= 6; ++i)
+		for (int i = 0; i < 6; ++i)
 		{
 			NSString *imgPath = [NSString stringWithFormat:@"portfolios/%d/thumbnail.jpg", i];
 			UIImage *img = [UIImage imageNamed:imgPath];
@@ -111,8 +142,8 @@
 
 - (void) doubleTapCallback
 {
+  [self showCollateral];
 }
-
 
 // *********************************************
 // Coverflow delegate methods

@@ -18,10 +18,9 @@
   IBOutlet UITextField *userName;
   IBOutlet UITextField *password;
   IBOutlet UIView *minime;
-	
-  NSArray *covers;
   IBOutlet CoverFlowView *cfView;
-	
+
+  NSArray *covers;
 }
 
 @property (retain) NSArray *covers;
@@ -29,6 +28,8 @@
 
 - (void)showBlogs:(id)sender;
 - (void)signIn:(id)sender;
+
+- (void)showCollateral;
 
 @end
 
