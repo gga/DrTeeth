@@ -1,3 +1,0 @@
-[submodule "OpenFlow"]
-	path = OpenFlow
-	url = git://github.com/thefaj/OpenFlow

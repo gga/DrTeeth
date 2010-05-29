@@ -9,7 +9,15 @@
 #import "DrTeethViewController.h"
 #import "TWBlogsController.h"
 
-@implementation DrTeethViewController
+@interface UIView (extended)
+- (void) startHeartbeat: (SEL) aSelector inRunLoopMode: (id) mode;	
+- (void) stopHeartbeat: (SEL) aSelector;
+@end
+
+@implementation DrTeethViewController 
+
+@synthesize covers;
+@synthesize cfView;
 
 
 /*
@@ -28,14 +36,27 @@
 }
 */
 
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+  [meContainer addSubview: credentials];
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
+	
+	// Finish setting up the cover flow layer
+	
+
+//	self.cfView = [[CoverFlowView alloc] initWithFrame: CGRectMake(20.0f, 300.0f, 200.0f, 720.0f)  andCount:[self.covers count] inLandscape: YES];
+	[self.cfView setUserInteractionEnabled:YES];
+//	[self.cfView setHost:self];
+
+//	[self.view addSubview: self.cfView];
+	//	self.whichItem = 1;
+	[self.cfView.cfLayer selectCoverAtIndex:2];
+	[self.cfView.cfLayer setDelegate:self];
+	[self.cfView.cfLayer setDisplayedOrientation: UIInterfaceOrientationPortrait animate:NO];
+	[self coverFlowStart];
+	
 }
-*/
-
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -45,8 +66,8 @@
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
+
+    // Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload {
@@ -61,8 +82,87 @@
   [self presentModalViewController:blogs animated:YES];
 }
 
+- (void)signIn:(id)sender
+{
+  NSLog(@"signIn boyo");
+}
+
 - (void)dealloc {
   [super dealloc];
 }
 
+
+- (void) coverFlowStart
+{
+	[self.cfView startHeartbeat: @selector(tick) inRunLoopMode: (id)kCFRunLoopDefaultMode];
+	[self.cfView.cfLayer transitionIn:1.0f];
+}
+
+/*
+  CoverFlowHost methods
+ */
+- (int) coverCount
+{
+	if (self.covers == nil)
+	{
+		self.covers = [NSArray array];
+		// Load the images
+		for (int i = 1; i <= 6; ++i)
+		{
+			NSString *imgPath = [NSString stringWithFormat:@"%d.jpg", i];
+			UIImage *img = [UIImage imageNamed:imgPath];
+			self.covers = [self.covers arrayByAddingObject: img];
+		}
+	}
+	return [self.covers count];
+}
+
+- (void) doubleTapCallback 
+{
+}
+	
+
+// *********************************************
+// Coverflow delegate methods
+//
+- (void) coverFlow: (id) coverFlow selectionDidChange: (int) index
+{
+//	self.whichItem = index;
+//	[self.cfView.label setText:[self.titles objectAtIndex:index]];
+}
+
+// Detect the end of the flip -- both on reveal and hide
+- (void) coverFlowFlipDidEnd: (UICoverFlowLayer *)coverFlow 
+{
+//	if (flipOut)
+//		[[[UIApplication sharedApplication] keyWindow] addSubview:flippedView];
+//	else
+//		[flippedView removeFromSuperview];
+}
+
+
+/* Cover flow datasource
+ */
+- (void) coverFlow:(id)coverFlow requestImageAtIndex: (int)index quality: (int)quality
+{
+	UIImage *whichImg = [self.covers objectAtIndex:index];
+	[coverFlow setImage:[whichImg CGImage]  atIndex:index type:quality];
+}
+
+// Return a flip layer, one that preferably integrates into the flip presentation
+- (id) coverFlow: (UICoverFlowLayer *)coverFlow requestFlipLayerAtIndex: (int) index
+{
+//	if (flipOut) [flippedView removeFromSuperview];
+//	flipOut = !flipOut;
+//	
+//	// Prepare the flip text
+//	[flippedView setText:[NSString stringWithFormat:@"%@\n%@", [self.titles objectAtIndex:index], [self.colorDict objectForKey:[self.titles objectAtIndex:index]]]];
+//	
+//	// Flip with a simple blank square
+//	UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 140.0f, 140.0f)] autorelease];
+//	[view setBackgroundColor:[UIColor clearColor]];
+//	
+//	return [view layer];
+	return nil;
+}
 @end
