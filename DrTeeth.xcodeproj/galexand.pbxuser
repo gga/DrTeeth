@@ -3574,6 +3574,16 @@
 		vrLen = 734;
 		vrLoc = 0;
 	};
+	0282E29211B11C2700D11308 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0237FB6C11B0E84C006B2D9B /* CoverFlowView.h */;
+		name = "CoverFlowView.h: 6";
+		rLen = 0;
+		rLoc = 136;
+		rType = 0;
+		vrLen = 734;
+		vrLoc = 0;
+	};
 	02908EF411A7B6CB00ECDADF /* DrTeeth */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -3703,7 +3713,7 @@
 		ignoreCount = 0;
 		lineNumber = 54;
 		location = DrTeeth;
-		modificationTime = 296819418.469537;
+		modificationTime = 296819537.000359;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -4141,6 +4151,7 @@
 			0282E28511B11AB800D11308 /* PBXTextBookmark */ = 0282E28511B11AB800D11308 /* PBXTextBookmark */;
 			0282E28911B11AD900D11308 /* PBXTextBookmark */ = 0282E28911B11AD900D11308 /* PBXTextBookmark */;
 			0282E29011B11B5000D11308 /* PBXTextBookmark */ = 0282E29011B11B5000D11308 /* PBXTextBookmark */;
+			0282E29211B11C2700D11308 /* PBXTextBookmark */ = 0282E29211B11C2700D11308 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 02908F0C11A7B6D600ECDADF /* Source Control */;
 		userBuildSettings = {

@@ -14,7 +14,7 @@
 	[[self layer] addSublayer:(CALayer *)self.cfLayer];
 	self.clipsToBounds = YES;
 	
-	self.transform = CGAffineTransformRotate(self.transform, -M_PI/2);
+	self.transform = CGAffineTransformScale(CGAffineTransformRotate(self.transform, -M_PI/2), 2.f, 2.f);
 	// Add the placeholder (image stand-in) layer
 	CGRect phrect = CGRectMake(0.0f, 0.0f, 200.0f, 200.0f);
 	self.phimg = [[UIImageView alloc] initWithFrame:phrect];

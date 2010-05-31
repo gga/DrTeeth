@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>0282E29011B11B5000D11308</string>
+						<string>0282E29211B11C2700D11308</string>
 						<key>history</key>
 						<array>
 							<string>0282E24411B117F000D11308</string>
@@ -589,8 +589,8 @@
 		<string>02908F0311A7B6D600ECDADF</string>
 		<string>0282E25A11B1197F00D11308</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/galexand/dev/personal/DrTeeth/DrTeeth.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>994 423 433 455 0 0 1440 878 </string>
