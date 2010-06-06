@@ -4,9 +4,9 @@
  *     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2006 by Steve Nygard.
  */
 
-// #import "CALayer.h"
+#import <QuartzCore/CALayer.h>
 
-@interface UICoverFlowLayer : NSObject // CALayer
+@interface UICoverFlowLayer : CALayer
 {
     void *_private;
 }

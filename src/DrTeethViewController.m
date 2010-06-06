@@ -19,6 +19,9 @@
 - (void) coverFlowStart;
 - (void) coverFlowStop;
 
+- (void)rightToLeftSwipe;
+- (void)leftToRightSwipe;
+
 @end
 
 @implementation DrTeethViewController
@@ -43,6 +46,24 @@
 }
 */
 
+// - (SEL)selector
+// {
+//   return @selector(apply);
+// }
+
+// - (void)apply
+// {
+//   void (^block)(void) = (id)self;
+//   block();
+// }
+
+// - (id)initWithBlock:(BasicBlock)block
+// {
+//   if (self = [super init])
+//     [self initWithTarget:block action:block.selector];
+//   return self;
+// }
+
 - (void)viewDidLoad
 {
   [super viewDidLoad];
@@ -53,6 +74,21 @@
 	[self.cfView.cfLayer selectCoverAtIndex:2];
 	[self.cfView.cfLayer setDelegate:self];
 	[self.cfView.cfLayer setDisplayedOrientation: UIInterfaceOrientationPortrait animate:NO];
+
+  // Attach the swipe recognizers
+//   ^(id recog){
+//     recog.direction = UISwipeGestureRecognizerDirectionLeft;
+//     [self.view addGestureRecognizer:recog];
+//   }(
+//   UISwipeGestureRecognizer *rtl = [[UISwipeGestureRecognizer alloc] initWithBlock:^{
+//       NSLog(@"Right to left swipe detected.");
+//     }]
+  UISwipeGestureRecognizer *rtl = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightToLeftSwipe)];
+  rtl.direction = UISwipeGestureRecognizerDirectionLeft;
+//   [self.view addGestureRecognizer:rtl];
+  UISwipeGestureRecognizer *ltr = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftToRightSwipe)];
+  ltr.direction = UISwipeGestureRecognizerDirectionRight;
+//   [self.view addGestureRecognizer:ltr];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -143,6 +179,16 @@
 - (void) doubleTapCallback
 {
   [self showCollateral];
+}
+
+- (void)rightToLeftSwipe
+{
+  NSLog(@"Right to left swipe detected.");
+}
+
+- (void)leftToRightSwipe
+{
+  NSLog(@"Left to right swipe detected.");
 }
 
 // *********************************************
